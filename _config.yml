@@ -1,0 +1,26 @@
+title: 붐붐솔솔
+description: 더 나은 학습 경험을 만듭니다
+url: "https://boomboomsolsol.app"
+baseurl: ""
+
+# 회사 정보
+company:
+  name: 붐붐솔솔
+  ceo: 서재형
+  email: boomsol.hi@gmail.com
+
+# Jekyll 설정
+markdown: kramdown
+permalink: /words/:title/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# 빌드 제외
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

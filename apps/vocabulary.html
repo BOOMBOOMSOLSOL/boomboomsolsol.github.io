@@ -1,0 +1,110 @@
+---
+layout: default
+title: 국어:어휘의 신
+description: 초등부터 성인까지, 10,000+ 단어로 국어 어휘력을 키우는 학습 앱
+---
+<style>
+  .app-hero { text-align: center; padding: 40px 0 60px; }
+  .app-hero .icon { font-size: 80px; margin-bottom: 16px; }
+  .app-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+  .app-hero .tagline { font-size: 18px; color: var(--text-sub); margin-bottom: 32px; }
+  .store-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .store-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--text); color: #fff;
+    padding: 12px 24px; border-radius: 12px;
+    text-decoration: none; font-size: 14px; font-weight: 600;
+    transition: transform 0.2s;
+  }
+  .store-btn:hover { transform: translateY(-2px); }
+  .store-btn.soon { background: #999; pointer-events: none; }
+
+  .features {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; padding: 40px 0;
+  }
+  .feat {
+    background: var(--surface);
+    padding: 28px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .feat .emoji { font-size: 32px; margin-bottom: 12px; }
+  .feat h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .feat p { font-size: 13px; color: var(--text-sub); line-height: 1.5; }
+
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; text-align: center; padding: 40px 0;
+  }
+  .stat-num { font-size: 32px; font-weight: 800; color: var(--accent-dark); }
+  .stat-label { font-size: 13px; color: var(--text-sub); margin-top: 2px; }
+
+  .cta { text-align: center; padding: 60px 0 20px; }
+  .cta h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+  .cta p { color: var(--text-sub); margin-bottom: 24px; }
+
+  @media (max-width: 600px) {
+    .app-hero h1 { font-size: 28px; }
+    .features { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<section class="app-hero">
+  <div class="icon">📚</div>
+  <h1>국어:어휘의 신</h1>
+  <p class="tagline">매일 한 단어씩, 어휘의 신이 되는 길</p>
+  <div class="store-buttons">
+    <a href="#" class="store-btn">Google Play (출시 예정)</a>
+    <a href="#" class="store-btn soon">App Store (준비 중)</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feat">
+    <div class="emoji">📚</div>
+    <h3>10,000+ 단어</h3>
+    <p>초등/중등/고등/성인<br>학년별 엄선된 어휘</p>
+  </div>
+  <div class="feat">
+    <div class="emoji">👆</div>
+    <h3>스와이프 학습</h3>
+    <p>카드를 넘기며<br>자연스럽게 단어 학습</p>
+  </div>
+  <div class="feat">
+    <div class="emoji">🧠</div>
+    <h3>5가지 퀴즈</h3>
+    <p>O/X, 4지선다, 빈칸채우기<br>뜻→단어, 유의어·반의어</p>
+  </div>
+  <div class="feat">
+    <div class="emoji">🔥</div>
+    <h3>스트릭</h3>
+    <p>매일 학습 기록을 쌓고<br>연속 습관을 만드세요</p>
+  </div>
+  <div class="feat">
+    <div class="emoji">🏆</div>
+    <h3>XP와 등급</h3>
+    <p>브론즈부터 다이아까지<br>경험치로 등급 상승</p>
+  </div>
+  <div class="feat">
+    <div class="emoji">📊</div>
+    <h3>상세 통계</h3>
+    <p>학습 패턴, 정답률<br>성장 추이를 한눈에</p>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div><div class="stat-num">10,000+</div><div class="stat-label">단어</div></div>
+  <div><div class="stat-num">4</div><div class="stat-label">학년 레벨</div></div>
+  <div><div class="stat-num">5</div><div class="stat-label">퀴즈 유형</div></div>
+  <div><div class="stat-num">30+</div><div class="stat-label">학습 팩</div></div>
+</section>
+
+<section class="cta">
+  <h2>오늘부터 어휘의 신이 되어보세요</h2>
+  <p>무료로 시작하고, 매일 조금씩 성장하세요.</p>
+  <div class="store-buttons">
+    <a href="#" class="store-btn">Google Play (출시 예정)</a>
+  </div>
+</section>

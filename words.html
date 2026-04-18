@@ -1,0 +1,48 @@
+---
+layout: default
+title: Words
+---
+<style>
+  .words-header { padding: 20px 0 40px; }
+  .words-header h1 { font-size: 32px; font-weight: 800; }
+  .words-header p { font-size: 15px; color: var(--text-sub); margin-top: 8px; }
+  .post-list { list-style: none; }
+  .post-list li {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .post-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .post-list a {
+    display: block;
+    padding: 24px;
+    text-decoration: none; color: var(--text);
+  }
+  .post-list h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .post-list .date { font-size: 13px; color: var(--text-sub); }
+  .empty { text-align: center; padding: 60px 0; color: var(--text-sub); }
+</style>
+
+<div class="words-header">
+  <h1>Words</h1>
+  <p>붐붐솔솔이 전하는 이야기</p>
+</div>
+
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
+      <span class="date">{{ post.date | date: "%Y년 %m월 %d일" }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">아직 작성된 글이 없습니다.</p>
+{% endif %}

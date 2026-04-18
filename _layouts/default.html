@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FCF9F4;
+      --surface: #FFFFFF;
+      --accent: #88C9A1;
+      --accent-dark: #5A9E80;
+      --text: #1C1C19;
+      --text-sub: #6B6860;
+      --radius: 16px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(252, 249, 244, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .nav-inner {
+      max-width: 1080px; margin: 0 auto;
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 18px; font-weight: 800;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-size: 14px; font-weight: 600;
+      text-decoration: none; color: var(--text-sub);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent-dark); }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      max-width: 1080px; margin: 0 auto;
+      padding: 80px 24px 40px;
+      width: 100%;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px; color: var(--text-sub);
+    }
+    footer a { color: var(--text-sub); text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: var(--accent-dark); }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 13px; }
+    }
+  </style>
+  {% if page.extra_css %}{{ page.extra_css }}{% endif %}
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">붐붐솔솔</a>
+      <div class="nav-links">
+        <a href="/apps/vocabulary">앱</a>
+        <a href="/words">글</a>
+        <a href="mailto:{{ site.company.email }}">문의</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>
+      <a href="/privacy">개인정보처리방침</a>
+      <a href="/terms">이용약관</a>
+      <a href="mailto:{{ site.company.email }}">문의하기</a>
+    </p>
+    <p style="margin-top: 8px;">&copy; 2026 {{ site.company.name }}. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
