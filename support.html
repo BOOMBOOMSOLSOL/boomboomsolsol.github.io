@@ -1,0 +1,141 @@
+---
+layout: default
+title: Support
+description: 도움이 필요하신가요?
+---
+
+<!-- Header -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <div class="max-w-3xl">
+    <p class="reveal inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
+      Support
+    </p>
+    <h1 class="reveal text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-ink mb-4">
+      도움이 필요하신가요?
+    </h1>
+    <p class="reveal text-lg text-sub leading-relaxed max-w-[50ch]">
+      자주 묻는 질문을 확인하거나, 직접 문의해 주세요.
+    </p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="reveal bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem]">
+    <div class="bg-surface rounded-[calc(2rem-0.375rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] p-6 md:p-8 flex items-center gap-4">
+      <div class="w-12 h-12 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0">
+        <iconify-icon icon="solar:letter-linear" width="24" class="text-sage-dark"></iconify-icon>
+      </div>
+      <div class="flex-1">
+        <p class="font-bold text-ink">이메일 문의</p>
+        <p class="text-sm text-sub">평일 기준 24시간 이내 답변드립니다</p>
+      </div>
+      <a href="mailto:{{ site.company.email }}" class="inline-flex items-center gap-2 rounded-full bg-ink text-white px-5 py-2.5 text-sm font-semibold premium-hover active:scale-[0.98] flex-shrink-0">
+        문의하기
+        <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  <h2 class="reveal text-2xl font-extrabold tracking-tight mb-8">자주 묻는 질문</h2>
+
+  <div class="space-y-3 stagger">
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">붐붐솔솔은 어떤 회사인가요?</p>
+          <iconify-icon icon="solar:alt-arrow-down-linear" width="18" class="text-sub group-open:rotate-180 transition-transform"></iconify-icon>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        붐붐솔솔은 학습 앱을 만드는 소프트웨어 스튜디오입니다. 매일 쓰고 싶은 앱을 목표로, 사용자 경험을 최우선으로 생각합니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">앱은 무료인가요?</p>
+          <iconify-icon icon="solar:alt-arrow-down-linear" width="18" class="text-sub group-open:rotate-180 transition-transform"></iconify-icon>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        기본 기능은 무료로 제공됩니다. 일부 프리미엄 콘텐츠는 인앱 구매를 통해 이용하실 수 있습니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">어떤 기기에서 사용할 수 있나요?</p>
+          <iconify-icon icon="solar:alt-arrow-down-linear" width="18" class="text-sub group-open:rotate-180 transition-transform"></iconify-icon>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        현재 Android를 우선 지원하며, iOS 버전도 준비 중입니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">버그를 발견했어요. 어디에 알려야 하나요?</p>
+          <iconify-icon icon="solar:alt-arrow-down-linear" width="18" class="text-sub group-open:rotate-180 transition-transform"></iconify-icon>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        <a href="mailto:{{ site.company.email }}" class="text-sage-dark underline underline-offset-2">{{ site.company.email }}</a>로 알려주시면 빠르게 확인하겠습니다. 스크린샷이나 재현 방법을 함께 보내주시면 더 빠른 처리가 가능합니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">개인정보는 어떻게 보호되나요?</p>
+          <iconify-icon icon="solar:alt-arrow-down-linear" width="18" class="text-sub group-open:rotate-180 transition-transform"></iconify-icon>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        불필요한 개인정보를 수집하지 않으며, 학습 데이터는 기기에 안전하게 저장됩니다. 자세한 내용은 <a href="/privacy" class="text-sage-dark underline underline-offset-2">개인정보처리방침</a>을 확인해 주세요.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- Legal Links -->
+<section id="legal" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  <h2 class="reveal text-2xl font-extrabold tracking-tight mb-8">법적 고지</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger">
+    <a href="/privacy" id="privacy" class="reveal group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.5rem] premium-hover">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] p-6 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0">
+            <iconify-icon icon="solar:shield-check-linear" width="20" class="text-sage-dark"></iconify-icon>
+          </div>
+          <div>
+            <p class="font-bold text-ink group-hover:text-sage-dark transition-colors">개인정보처리방침</p>
+            <p class="text-xs text-sub mt-0.5">개인정보 수집 및 이용 안내</p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="/terms" id="terms" class="reveal group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.5rem] premium-hover">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] p-6 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0">
+            <iconify-icon icon="solar:document-text-linear" width="20" class="text-sage-dark"></iconify-icon>
+          </div>
+          <div>
+            <p class="font-bold text-ink group-hover:text-sage-dark transition-colors">이용약관</p>
+            <p class="text-xs text-sub mt-0.5">서비스 이용 조건</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

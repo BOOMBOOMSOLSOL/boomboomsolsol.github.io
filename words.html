@@ -1,48 +1,58 @@
 ---
 layout: default
 title: Words
+description: 붐붐솔솔이 전하는 이야기
 ---
-<style>
-  .words-header { padding: 20px 0 40px; }
-  .words-header h1 { font-size: 32px; font-weight: 800; }
-  .words-header p { font-size: 15px; color: var(--text-sub); margin-top: 8px; }
-  .post-list { list-style: none; }
-  .post-list li {
-    background: var(--surface);
-    border-radius: var(--radius);
-    margin-bottom: 16px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .post-list li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  }
-  .post-list a {
-    display: block;
-    padding: 24px;
-    text-decoration: none; color: var(--text);
-  }
-  .post-list h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-  .post-list .date { font-size: 13px; color: var(--text-sub); }
-  .empty { text-align: center; padding: 60px 0; color: var(--text-sub); }
-</style>
 
-<div class="words-header">
-  <h1>Words</h1>
-  <p>붐붐솔솔이 전하는 이야기</p>
-</div>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <div class="max-w-3xl">
+    <p class="reveal inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
+      Words
+    </p>
+    <h1 class="reveal text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-ink mb-4">
+      이야기
+    </h1>
+    <p class="reveal text-lg text-sub leading-relaxed">
+      앱을 만들며 느끼고 배운 것들을 나눕니다.
+    </p>
+  </div>
+</section>
 
-{% if site.posts.size > 0 %}
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">
-      <h2>{{ post.title }}</h2>
-      <span class="date">{{ post.date | date: "%Y년 %m월 %d일" }}</span>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  {% if site.posts.size > 0 %}
+  <div class="max-w-3xl space-y-4 stagger">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="reveal block group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.5rem] premium-hover">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h2 class="text-lg font-bold text-ink group-hover:text-sage-dark transition-colors">{{ post.title }}</h2>
+              {% if post.excerpt %}
+              <p class="text-sm text-sub mt-2 leading-relaxed line-clamp-2">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+              {% endif %}
+              <p class="text-xs text-sub/60 mt-3">{{ post.date | date: "%Y년 %m월 %d일" }}</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-black/[0.03] flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-sage/10 transition-colors">
+              <iconify-icon icon="solar:arrow-right-linear" width="14" class="text-sub group-hover:text-sage-dark transition-colors"></iconify-icon>
+            </div>
+          </div>
+        </div>
+      </div>
     </a>
-  </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p class="empty">아직 작성된 글이 없습니다.</p>
-{% endif %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="max-w-3xl">
+    <div class="reveal bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem]">
+      <div class="bg-surface rounded-[calc(2rem-0.375rem)] p-12 md:p-16 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-black/[0.03] flex items-center justify-center mx-auto mb-6">
+          <iconify-icon icon="solar:pen-new-square-linear" width="28" class="text-sub/40"></iconify-icon>
+        </div>
+        <p class="text-lg font-bold text-sub/60 mb-2">아직 작성된 글이 없습니다</p>
+        <p class="text-sm text-sub/40">곧 첫 이야기를 전해드리겠습니다</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>

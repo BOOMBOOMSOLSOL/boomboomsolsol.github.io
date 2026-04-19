@@ -5,102 +5,264 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            cream: '#FAFAF7',
+            sage: { DEFAULT: '#7BA886', dark: '#5A8A6A' },
+            ink: '#1C1C19',
+            sub: '#6B6860',
+            surface: '#FFFFFF',
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+
   <style>
-    :root {
-      --bg: #FCF9F4;
-      --surface: #FFFFFF;
-      --accent: #88C9A1;
-      --accent-dark: #5A9E80;
-      --text: #1C1C19;
-      --text-sub: #6B6860;
-      --radius: 16px;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    * { word-break: keep-all; }
+
+    /* Noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 128px 128px;
     }
 
-    /* ── Nav ── */
-    nav {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(252, 249, 244, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(1.5rem);
+      filter: blur(4px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .nav-inner {
-      max-width: 1080px; margin: 0 auto;
-      padding: 14px 24px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo {
-      font-size: 18px; font-weight: 800;
-      text-decoration: none; color: var(--text);
-    }
-    .nav-links { display: flex; gap: 28px; }
-    .nav-links a {
-      font-size: 14px; font-weight: 600;
-      text-decoration: none; color: var(--text-sub);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent-dark); }
-
-    /* ── Main ── */
-    main {
-      flex: 1;
-      max-width: 1080px; margin: 0 auto;
-      padding: 80px 24px 40px;
-      width: 100%;
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
     }
 
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid rgba(0,0,0,0.05);
-      padding: 24px;
-      text-align: center;
-      font-size: 13px; color: var(--text-sub);
-    }
-    footer a { color: var(--text-sub); text-decoration: none; margin: 0 12px; }
-    footer a:hover { color: var(--accent-dark); }
+    /* Stagger children */
+    .stagger > * { transition-delay: calc(var(--index, 0) * 80ms); }
 
-    @media (max-width: 600px) {
-      .nav-links { gap: 16px; }
-      .nav-links a { font-size: 13px; }
+    /* Supanova premium transition */
+    .premium-hover {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .premium-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);
+    }
+
+    /* Floating glass nav */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 24px -4px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+
+    /* CTA glow on hover */
+    .cta-glow {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cta-glow:hover {
+      box-shadow: 0 0 30px rgba(123, 168, 134, 0.25);
+    }
+
+    /* CTA arrow shift */
+    .cta-arrow {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .cta-arrow,
+    a:hover .cta-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Mobile nav overlay */
+    .mobile-nav {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-nav.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-nav a, .mobile-nav button.nav-dl {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-nav.open a:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 80ms; }
+    .mobile-nav.open a:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 160ms; }
+    .mobile-nav.open a:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 240ms; }
+    .mobile-nav.open a:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 320ms; }
+
+    /* Gradient mesh orbs */
+    .mesh-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Float animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+    @keyframes gradientRotate {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
     }
   </style>
+
   {% if page.extra_css %}{{ page.extra_css }}{% endif %}
 </head>
-<body>
+<body class="bg-cream text-ink font-sans min-h-[100dvh] flex flex-col antialiased">
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">붐붐솔솔</a>
-      <div class="nav-links">
-        <a href="/apps/vocabulary">앱</a>
-        <a href="/words">글</a>
-        <a href="mailto:{{ site.company.email }}">문의</a>
+  <!-- Floating Glass Pill Navigation -->
+  <nav class="fixed top-0 w-full z-40 px-4 sm:px-6 lg:px-8 pt-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="glass-nav rounded-full px-6 py-3 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="inline-block transition-opacity hover:opacity-70">
+          <img src="/assets/images/logo.png" alt="붐붐솔솔" class="h-6 w-auto">
+        </a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/apps" class="text-base font-bold uppercase tracking-wide text-ink/80 hover:text-ink transition-colors">Apps</a>
+          <a href="/breeze" class="text-base font-bold uppercase tracking-wide text-ink/80 hover:text-ink transition-colors">Breeze</a>
+          <a href="/support" class="text-base font-bold uppercase tracking-wide text-ink/80 hover:text-ink transition-colors">Support</a>
+          <a href="{{ site.company.playstore | default: '#' }}" class="text-base font-bold bg-ink text-white rounded-full px-6 py-2 hover:bg-ink/85 hover:scale-[1.02] active:scale-[0.98] transition-all">Download</a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="nav-toggle" class="md:hidden w-10 h-10 flex items-center justify-center" aria-label="메뉴">
+          <iconify-icon icon="solar:hamburger-menu-linear" width="24" class="text-ink"></iconify-icon>
+        </button>
       </div>
     </div>
   </nav>
 
-  <main>
+  <!-- Mobile nav overlay -->
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-50 bg-cream/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-8">
+    <button id="nav-close" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center">
+      <iconify-icon icon="solar:close-circle-linear" width="28" class="text-ink"></iconify-icon>
+    </button>
+    <a href="/apps" class="text-2xl font-bold text-ink">Apps</a>
+    <a href="/breeze" class="text-2xl font-bold text-ink">Breeze</a>
+    <a href="/support" class="text-2xl font-bold text-ink">Support</a>
+    <a href="{{ site.company.playstore | default: '#' }}" class="inline-flex items-center text-xl font-bold bg-ink text-white rounded-full px-8 py-3">Download</a>
+  </div>
+
+  <!-- Main -->
+  <main class="flex-1 w-full pt-24">
     {{ content }}
   </main>
 
-  <footer>
-    <p>
-      <a href="/privacy">개인정보처리방침</a>
-      <a href="/terms">이용약관</a>
-      <a href="mailto:{{ site.company.email }}">문의하기</a>
-    </p>
-    <p style="margin-top: 8px;">&copy; 2026 {{ site.company.name }}. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="border-t border-black/5 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+        <div>
+          <a href="/" class="inline-block mb-3">
+            <img src="/assets/images/logo.png" alt="붐붐솔솔" class="h-5 w-auto opacity-60">
+          </a>
+          <p class="text-xs text-sub leading-relaxed max-w-[30ch]">{{ site.description }}</p>
+        </div>
+        <div class="flex gap-12">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub/50 mb-3">Navigate</p>
+            <div class="flex flex-col gap-2">
+              <a href="/apps" class="text-sm text-sub hover:text-ink transition-colors">Apps</a>
+              <a href="/breeze" class="text-sm text-sub hover:text-ink transition-colors">Breeze</a>
+              <a href="/support" class="text-sm text-sub hover:text-ink transition-colors">Support</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub/50 mb-3">Legal</p>
+            <div class="flex flex-col gap-2">
+              <a href="/privacy" class="text-sm text-sub hover:text-ink transition-colors">개인정보처리방침</a>
+              <a href="/terms" class="text-sm text-sub hover:text-ink transition-colors">이용약관</a>
+              <a href="mailto:{{ site.company.email }}" class="text-sm text-sub hover:text-ink transition-colors">문의하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-black/5">
+        <p class="text-xs text-sub/40">&copy; {{ site.time | date: '%Y' }} {{ site.company.name }}. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Scripts -->
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById('nav-toggle');
+    const closeBtn = document.getElementById('nav-close');
+    const mobileNav = document.getElementById('mobile-nav');
+    toggle.addEventListener('click', () => mobileNav.classList.add('open'));
+    closeBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Scroll reveal with stagger
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.setProperty('--index', i);
+      observer.observe(el);
+    });
+
+    // Nav background on scroll
+    const nav = document.querySelector('.glass-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.style.background = 'rgba(255,255,255,0.85)';
+        nav.style.boxShadow = '0 8px 32px -4px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)';
+      } else {
+        nav.style.background = 'rgba(255,255,255,0.75)';
+        nav.style.boxShadow = '0 4px 24px -4px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6)';
+      }
+    }, { passive: true });
+  </script>
 </body>
 </html>

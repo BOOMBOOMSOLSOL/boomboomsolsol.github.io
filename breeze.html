@@ -1,0 +1,71 @@
+---
+layout: default
+title: Breeze
+description: 붐붐솔솔이 전하는 이야기
+---
+
+<!-- Header -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <div class="max-w-3xl">
+    <p class="reveal inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
+      Breeze
+    </p>
+    <h1 class="reveal text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-ink mb-4">
+      이야기
+    </h1>
+    <p class="reveal text-lg text-sub leading-relaxed max-w-[50ch]">
+      앱을 만들며 느끼고 배운 것들을 나눕니다.
+    </p>
+  </div>
+</section>
+
+<!-- Post Grid -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  {% if site.posts.size > 0 %}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="reveal group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem] premium-hover h-full">
+        <div class="bg-surface rounded-[calc(2rem-0.375rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] overflow-hidden h-full">
+          {% if post.image %}
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
+          </div>
+          {% else %}
+          <div class="aspect-[16/9] bg-gradient-to-br from-sage/15 to-sage/5 flex items-center justify-center">
+            <iconify-icon icon="solar:document-text-linear" width="32" class="text-sage-dark/40"></iconify-icon>
+          </div>
+          {% endif %}
+          <div class="p-6">
+            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub/60 mb-2">
+              {{ post.date | date: "%Y.%m.%d" }}
+              {% if post.category %} · {{ post.category }}{% endif %}
+            </p>
+            <h2 class="text-lg font-bold text-ink group-hover:text-sage-dark transition-colors leading-snug mb-2">
+              {{ post.title }}
+            </h2>
+            {% if post.excerpt %}
+            <p class="text-sm text-sub leading-relaxed line-clamp-2">
+              {{ post.excerpt | strip_html | truncate: 100 }}
+            </p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="max-w-xl">
+    <div class="reveal bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem]">
+      <div class="bg-surface rounded-[calc(2rem-0.375rem)] p-12 md:p-16 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-black/[0.03] flex items-center justify-center mx-auto mb-6">
+          <iconify-icon icon="solar:pen-new-square-linear" width="28" class="text-sub/40"></iconify-icon>
+        </div>
+        <p class="text-lg font-bold text-sub/60 mb-2">아직 작성된 글이 없습니다</p>
+        <p class="text-sm text-sub/40">곧 첫 이야기를 전해드리겠습니다</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
