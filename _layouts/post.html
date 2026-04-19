@@ -9,6 +9,13 @@ layout: default
     Breeze
   </a>
 
+  <!-- Thumbnail -->
+  {% if page.image %}
+  <div class="reveal mb-8 overflow-hidden rounded-2xl">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-auto" loading="eager" decoding="async">
+  </div>
+  {% endif %}
+
   <!-- Post header -->
   <header class="reveal mb-12">
     <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-ink mb-4">
@@ -39,10 +46,12 @@ layout: default
     max-width: 65ch;
   }
   .prose-custom h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 400;
     margin: 2.5rem 0 1rem;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #6B6860;
   }
   .prose-custom h3 {
     font-size: 1.25rem;
