@@ -8,7 +8,8 @@ company:
   name: 붐붐솔솔
   ceo: 서재형
   email: boomsol.hi@gmail.com
-  playstore: "#"  # Google Play 개발자 페이지 URL (출시 후 업데이트)
+  playstore: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.voca"
+  appstore: "#"  # App Store URL (iOS 출시 후 업데이트)
 
 # Jekyll 설정
 markdown: kramdown
