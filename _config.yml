@@ -11,6 +11,7 @@ company:
   download: "/download/vocabulary/"
   playstore: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.voca"
   appstore: "https://apps.apple.com/kr/app/%EA%B5%AD%EC%96%B4-%EC%96%B4%ED%9C%98%EC%9D%98-%EC%8B%A0/id6783699261"
+  facts_playstore: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.facts&hl=ko"
 
 # Jekyll 설정
 markdown: kramdown
