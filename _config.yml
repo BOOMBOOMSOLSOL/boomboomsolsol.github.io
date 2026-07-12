@@ -8,8 +8,9 @@ company:
   name: 붐붐솔솔
   ceo: 서재형
   email: boomsol.hi@gmail.com
+  download: "/download/vocabulary/"
   playstore: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.voca"
-  appstore: "#"  # App Store URL (iOS 출시 후 업데이트)
+  appstore: "https://apps.apple.com/kr/app/%EA%B5%AD%EC%96%B4-%EC%96%B4%ED%9C%98%EC%9D%98-%EC%8B%A0/id6783699261"
 
 # Jekyll 설정
 markdown: kramdown
