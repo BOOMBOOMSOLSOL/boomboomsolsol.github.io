@@ -2,7 +2,8 @@
 layout: post
 title: "열등생을 몰라?"
 date: 2026-04-19
-image: /assets/images/hero.png
+description: 한 단어의 오해에서 시작된 국어 어휘 학습 앱 제작 이야기입니다.
+image: /assets/images/hero.webp
 ---
 
 한 달 전 어느 저녁,
@@ -95,3 +96,8 @@ image: /assets/images/hero.png
 *국어:어휘의 신은 곧 Google Play에서 만나실 수 있습니다.*
 
 *열등생의 뜻을 아는 것. 그게 시작입니다.*
+
+
+---
+
+현재 제공되는 앱과 새로운 소식은 [학습 앱 소개](/apps/)에서 확인하실 수 있습니다.

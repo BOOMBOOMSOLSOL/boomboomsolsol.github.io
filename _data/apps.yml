@@ -1,0 +1,36 @@
+- id: vocabulary
+  name: "국어:어휘의 신"
+  category: 국어
+  description: "한 단어를 알아가는 즐거움. 카드와 퀴즈로 국어 어휘를 차곡차곡 익혀요."
+  icon: /assets/images/voca_app_icon.webp
+  url: /apps/vocabulary/
+  status: 출시
+  platforms: "iOS · Android"
+  download: /download/vocabulary/
+  android: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.voca"
+  ios: "https://apps.apple.com/kr/app/%EA%B5%AD%EC%96%B4-%EC%96%B4%ED%9C%98%EC%9D%98-%EC%8B%A0/id6783699261"
+- id: math
+  name: "수학:연산의 신"
+  category: 수학
+  description: "직접 풀고, 힌트로 생각하고, 풀이로 이해하는 나만의 수학 연습."
+  icon: /assets/images/math/app-icon.webp
+  url: /apps/math/
+  status: 출시 예정
+  platforms: "iOS · Android 준비 중"
+- id: english
+  name: "영어:단어의 신"
+  category: 영어
+  description: "영어 단어를 알아가는 새로운 학습 경험을 준비하고 있어요."
+  icon: /assets/images/english/app-icon.webp
+  url: /apps/english/
+  status: 출시 예정
+  platforms: 준비 중
+- id: facts
+  name: "국어:상식의 신"
+  category: 상식
+  description: "하루의 작은 호기심이 지식으로. 재미있는 상식을 카드로 만나요."
+  icon: /assets/images/facts/facts_app_icon.webp
+  url: /apps/facts/
+  status: 출시
+  platforms: Android
+  android: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.facts&hl=ko"

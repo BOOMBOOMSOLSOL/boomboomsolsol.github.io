@@ -7,8 +7,8 @@ baseurl: ""
 company:
   name: 붐붐솔솔
   ceo: 서재형
-  email: boomsol.hi@gmail.com
-  download: "/download/vocabulary/"
+  email: support@boomboomsolsol.app
+  download: "/download/"
   playstore: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.voca"
   appstore: "https://apps.apple.com/kr/app/%EA%B5%AD%EC%96%B4-%EC%96%B4%ED%9C%98%EC%9D%98-%EC%8B%A0/id6783699261"
   facts_playstore: "https://play.google.com/store/apps/details?id=app.boomboomsolsol.facts&hl=ko"
@@ -28,3 +28,11 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.cjs
+  - styles
+  - scripts
+  - .claude
+  - research

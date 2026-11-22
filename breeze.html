@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Breeze
+permalink: /breeze/
+title: 소식과 이야기
 description: 붐붐솔솔이 전하는 이야기
 ---
 
@@ -8,7 +9,7 @@ description: 붐붐솔솔이 전하는 이야기
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
   <div class="max-w-3xl">
     <p class="reveal inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
-      Breeze
+      이야기
     </p>
     <h1 class="reveal text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-ink mb-4">
       이야기
@@ -33,11 +34,11 @@ description: 붐붐솔솔이 전하는 이야기
           </div>
           {% else %}
           <div class="aspect-[16/9] bg-gradient-to-br from-sage/15 to-sage/5 flex items-center justify-center">
-            <iconify-icon icon="solar:document-text-linear" width="32" class="text-sage-dark/40"></iconify-icon>
+            <svg aria-hidden="true" focusable="false" class="site-icon text-sage-dark/40" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6m-6 4h6m-6 4h4"/></svg>
           </div>
           {% endif %}
           <div class="p-6">
-            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub/60 mb-2">
+            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub mb-2">
               {{ post.date | date: "%Y.%m.%d" }}
               {% if post.category %} · {{ post.category }}{% endif %}
             </p>
@@ -60,10 +61,10 @@ description: 붐붐솔솔이 전하는 이야기
     <div class="reveal bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem]">
       <div class="bg-surface rounded-[calc(2rem-0.375rem)] p-12 md:p-16 text-center">
         <div class="w-16 h-16 rounded-2xl bg-black/[0.03] flex items-center justify-center mx-auto mb-6">
-          <iconify-icon icon="solar:pen-new-square-linear" width="28" class="text-sub/40"></iconify-icon>
+          <svg aria-hidden="true" focusable="false" class="site-icon text-sub" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-8M12 12l8-8 2 2-8 8-4 1z"/></svg>
         </div>
-        <p class="text-lg font-bold text-sub/60 mb-2">아직 작성된 글이 없습니다</p>
-        <p class="text-sm text-sub/40">곧 첫 이야기를 전해드리겠습니다</p>
+        <p class="text-lg font-bold text-sub mb-2">아직 작성된 글이 없습니다</p>
+        <p class="text-sm text-sub">곧 첫 이야기를 전해드리겠습니다</p>
       </div>
     </div>
   </div>

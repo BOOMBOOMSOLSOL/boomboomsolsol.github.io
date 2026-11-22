@@ -1,0 +1,11 @@
+<article class="app-card app-{{ include.app.id }}">
+  <div class="app-card-top">
+    <img src="{{ include.app.icon }}" alt="" width="88" height="88" loading="lazy" decoding="async" class="app-icon">
+    <span class="status{% unless include.app.android or include.app.ios %} status-soon{% endunless %}">{{ include.app.status }}</span>
+  </div>
+  <p class="eyebrow">{{ include.app.category }}</p>
+  <h{{ include.heading | default: 2 }}><a href="{{ include.app.url }}">{{ include.app.name }}</a></h{{ include.heading | default: 2 }}>
+  <p class="app-description">{{ include.app.description }}</p>
+  <p class="platforms">{{ include.app.platforms }}</p>
+  <a class="text-link" href="{{ include.app.url }}">{{ include.app.name }} 알아보기 <span aria-hidden="true">↗</span></a>
+</article>

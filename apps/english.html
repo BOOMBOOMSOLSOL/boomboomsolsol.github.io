@@ -1,0 +1,13 @@
+---
+layout: "default"
+title: "영어:단어의 신"
+description: "붐붐솔솔의 새로운 영어 학습 앱, 영어:단어의 신을 준비하고 있습니다."
+app_id: "english"
+og_image: "/assets/images/english/app-icon.webp"
+permalink: "/apps/english/"
+---
+
+
+{% assign app = site.data.apps | where: 'id', 'english' | first %}
+<section class="site-container product-hero"><div><p class="eyebrow">영어 · 출시 예정</p><h1>{{ app.name }}</h1><p class="hero-description">새로운 단어를 만나는 시간.<br>영어의 즐거움을 준비하고 있어요.</p><p>국어와 수학에서 이어지는 붐붐솔솔의 다음 배움.<br>자세한 학습 방식과 출시 일정은 공식 사이트에서 알려드릴게요.</p><div class="button-row"><a class="button button-primary" href="/apps/">지금 만날 수 있는 앱 보기</a><a class="button button-secondary" href="/breeze/">붐붐솔솔 이야기</a></div></div><div class="product-art english-art"><img src="{{ app.icon }}" alt="영어:단어의 신 앱 아이콘" width="256" height="256"><p>단어 하나에서 시작되는 새로운 배움.</p><span class="status status-soon">출시 예정</span></div></section>
+<section class="site-container section-space"><div class="help-panel"><div><h2>좋은 배움을 만들고 있습니다.</h2><p>궁금한 점이나 전하고 싶은 의견이 있다면 들려주세요.</p></div><a class="button button-secondary" href="/support/#english">영어 앱 문의하기</a></div></section>

@@ -1,0 +1,11 @@
+{
+  "name": "boomboomsolsol-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i styles/site.css -o assets/css/site.css --minify",
+    "check": "python3 scripts/check_site.py _site"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

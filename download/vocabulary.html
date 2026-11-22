@@ -5,6 +5,8 @@ description: 국어:어휘의 신을 Google Play 또는 App Store에서 다운�
 permalink: /download/vocabulary/
 ---
 
+{% assign app = site.data.apps | where: 'id', 'vocabulary' | first %}
+
 <section class="relative overflow-hidden min-h-[calc(100dvh-6rem)] flex items-center">
   <div class="mesh-orb w-[30rem] h-[30rem] bg-sage/25 -top-48 -right-32 animate-[gradientRotate_20s_ease-in-out_infinite]" style="position:absolute;"></div>
   <div class="mesh-orb w-[24rem] h-[24rem] bg-[#F5A623]/10 -bottom-40 -left-32 animate-[gradientRotate_25s_ease-in-out_infinite_reverse]" style="position:absolute;"></div>
@@ -15,7 +17,7 @@ permalink: /download/vocabulary/
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <div class="p-7 sm:p-10 md:p-12 lg:p-14 flex flex-col justify-center">
             <div class="flex items-center gap-4 mb-8">
-              <img src="/assets/images/voca_app_icon.png" alt="국어:어휘의 신 앱 아이콘" class="w-20 h-20 sm:w-24 sm:h-24 rounded-[1.5rem] shadow-[0_16px_36px_-18px_rgba(28,28,25,0.35)]" loading="eager" decoding="async">
+              <img width="512" height="512" src="/assets/images/voca_app_icon.webp" alt="국어:어휘의 신 앱 아이콘" class="w-20 h-20 sm:w-24 sm:h-24 rounded-[1.5rem] shadow-[0_16px_36px_-18px_rgba(28,28,25,0.35)]" loading="eager" decoding="async">
               <div>
                 <p class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-semibold bg-sage/10 text-sage-dark mb-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-sage-dark"></span>
@@ -35,22 +37,22 @@ permalink: /download/vocabulary/
 
             <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-sub mb-8" aria-label="앱 주요 특징">
               <span class="inline-flex items-center gap-1.5">
-                <iconify-icon icon="solar:check-circle-linear" width="16" class="text-sage-dark"></iconify-icon>
+                <svg aria-hidden="true" focusable="false" class="site-icon text-sage-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
                 무료로 시작
               </span>
               <span class="inline-flex items-center gap-1.5">
-                <iconify-icon icon="solar:check-circle-linear" width="16" class="text-sage-dark"></iconify-icon>
+                <svg aria-hidden="true" focusable="false" class="site-icon text-sage-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
                 오프라인 학습
               </span>
               <span class="inline-flex items-center gap-1.5">
-                <iconify-icon icon="solar:check-circle-linear" width="16" class="text-sage-dark"></iconify-icon>
+                <svg aria-hidden="true" focusable="false" class="site-icon text-sage-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
                 매일 성장 기록
               </span>
             </div>
 
-            <a href="/apps/vocabulary" class="group inline-flex items-center gap-2 w-fit text-sm font-semibold text-sub hover:text-ink transition-colors">
+            <a href="/apps/vocabulary/" class="group inline-flex items-center gap-2 w-fit text-sm font-semibold text-sub hover:text-ink transition-colors">
               앱 자세히 보기
-              <iconify-icon icon="solar:arrow-right-linear" width="15" class="cta-arrow"></iconify-icon>
+              <svg aria-hidden="true" focusable="false" class="site-icon cta-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 5 7 7-7 7M5 12h14"/></svg>
             </a>
           </div>
 
@@ -62,33 +64,27 @@ permalink: /download/vocabulary/
             </p>
 
             <div class="space-y-3">
-              <a href="{{ site.company.playstore }}" data-store="android" target="_blank" rel="noopener noreferrer" class="store-option group relative flex items-center gap-4 rounded-[1.25rem] bg-ink text-white px-5 py-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage/30" aria-label="Google Play에서 국어:어휘의 신 다운로드">
+              <a href="{{ app.android }}" data-store="android" target="_blank" rel="noopener noreferrer" class="store-option group relative flex items-center gap-4 rounded-[1.25rem] bg-ink text-white px-5 py-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage/30" aria-label="Google Play에서 국어:어휘의 신 다운로드">
                 <span class="recommended-label absolute -top-2.5 right-4 rounded-full bg-sage-dark text-white px-2.5 py-1 text-[10px] font-bold shadow-sm">현재 기기 추천</span>
-                <span class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <iconify-icon icon="logos:google-play-icon" width="23"></iconify-icon>
-                </span>
                 <span class="min-w-0 flex-1">
-                  <span class="block text-[11px] text-white/55 mb-0.5">다운로드하기</span>
+                  <span class="block text-[11px] text-white/85 mb-0.5">다운로드하기</span>
                   <span class="block text-base font-bold">Google Play</span>
                 </span>
-                <iconify-icon icon="solar:arrow-right-up-linear" width="20" class="text-white/55 group-hover:text-white transition-colors"></iconify-icon>
+                <svg aria-hidden="true" focusable="false" class="site-icon text-white/85 group-hover:text-white transition-colors" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 18 6M6 6h12v12"/></svg>
               </a>
 
-              <a href="{{ site.company.appstore }}" data-store="ios" target="_blank" rel="noopener noreferrer" class="store-option group relative flex items-center gap-4 rounded-[1.25rem] bg-ink text-white px-5 py-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage/30" aria-label="App Store에서 국어:어휘의 신 다운로드">
+              <a href="{{ app.ios }}" data-store="ios" target="_blank" rel="noopener noreferrer" class="store-option group relative flex items-center gap-4 rounded-[1.25rem] bg-ink text-white px-5 py-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage/30" aria-label="App Store에서 국어:어휘의 신 다운로드">
                 <span class="recommended-label absolute -top-2.5 right-4 rounded-full bg-sage-dark text-white px-2.5 py-1 text-[10px] font-bold shadow-sm">현재 기기 추천</span>
-                <span class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <iconify-icon icon="simple-icons:apple" width="23"></iconify-icon>
-                </span>
                 <span class="min-w-0 flex-1">
-                  <span class="block text-[11px] text-white/55 mb-0.5">다운로드하기</span>
+                  <span class="block text-[11px] text-white/85 mb-0.5">다운로드하기</span>
                   <span class="block text-base font-bold">App Store</span>
                 </span>
-                <iconify-icon icon="solar:arrow-right-up-linear" width="20" class="text-white/55 group-hover:text-white transition-colors"></iconify-icon>
+                <svg aria-hidden="true" focusable="false" class="site-icon text-white/85 group-hover:text-white transition-colors" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 18 6M6 6h12v12"/></svg>
               </a>
             </div>
 
-            <p class="mt-6 text-xs text-sub/70 leading-relaxed">
-              스토어로 이동해 앱을 설치할 수 있습니다. 기기를 자동으로 다른 페이지에 보내지 않으며, 원하는 스토어를 직접 선택할 수 있습니다.
+            <p class="mt-6 text-xs text-sub leading-relaxed">
+              원하는 스토어를 선택해 앱을 설치하세요.
             </p>
           </div>
         </div>
@@ -144,3 +140,5 @@ permalink: /download/vocabulary/
     }
   })();
 </script>
+
+<section class="site-container section-space policy-links"><a href="/support/#vocabulary">앱 이용 도움말</a><a href="/privacy/#vocabulary">개인정보 안내</a><a href="/terms/#vocabulary">이용 조건</a></section>
