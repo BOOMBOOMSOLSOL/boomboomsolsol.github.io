@@ -20,17 +20,57 @@ description: "국어 어휘부터 수학 연산, 영어 단어와 상식까지. 
   <div class="app-grid">{% for app in site.data.apps %}{% include app-card.html app=app heading=3 %}{% endfor %}</div>
 </section>
 
-<section class="site-container section-space" aria-labelledby="approach-title">
-  <div class="approach-panel">
-    <div>
-      <p class="eyebrow">붐붐솔솔의 생각</p>
-      <h2 id="approach-title">작고 쉽게,<br>즐겁게 조금씩.</h2>
-      <p>붐붐솔솔은 마이크로 학습을 만듭니다.<br>학습을 작게 나누어 쉽게 시작하고, 즐겁게 조금씩 쌓아가도록.</p>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-24 md:pb-32 relative overflow-hidden">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center relative z-10">
+    <div class="reveal md:col-span-5">
+      <p class="inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
+        붐붐솔솔의 생각
+      </p>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-6">
+        작고 쉽게, 즐겁게 조금씩.
+      </h2>
+      <p class="text-base md:text-lg text-sub leading-relaxed">
+        붐붐솔솔은 마이크로 학습을 만듭니다.
+        학습을 작게 나누어 쉽게 시작하고, 즐겁게 조금씩 쌓아가도록.
+      </p>
     </div>
-    <div class="approach-list">
-      <div><span>01</span><h3>가볍게 시작해요</h3><p>작고 쉬운 학습으로 부담 없이.</p></div>
-      <div><span>02</span><h3>즐겁게 익혀요</h3><p>하나씩 알아가는 재미를 느끼며.</p></div>
-      <div><span>03</span><h3>조금씩 쌓아가요</h3><p>매일의 작은 배움이 나의 성장이 되도록.</p></div>
+    <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 stagger">
+      <div class="reveal bg-white/50 ring-1 ring-white/50 p-1 rounded-[1.5rem] backdrop-blur-sm shadow-[0_2px_12px_-4px_rgba(0,0,0,0.03)]">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] p-6">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center mb-4">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><mask id="SVGIHQypetX" fill="#fff"><path d="M11.085 7a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0"/></mask><mask id="SVGjXBqqeYj" fill="#fff"><path d="M16 7a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0"/></mask><g fill="none" stroke="currentColor"><path stroke-width="1.5" d="M2 12.026c0 5.146 3.867 9.387 8.847 9.96c.735.085 1.447-.228 1.97-.753a1.68 1.68 0 0 0 0-2.372c-.523-.525-.95-1.307-.555-1.934c1.576-2.508 9.738 3.251 9.738-4.9C22 6.488 17.523 2 12 2S2 6.489 2 12.026Z"/><circle cx="17.5" cy="11.5" r=".75" stroke-width="1.5"/><circle cx="6.5" cy="11.5" r=".75" stroke-width="1.5"/><path stroke-width="3" d="M11.085 7a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0Z" mask="url(#SVGIHQypetX)"/><path stroke-width="3" d="M16 7a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0Z" mask="url(#SVGjXBqqeYj)"/></g></svg>
+          </div>
+          <p class="font-bold text-ink mb-1">작게 배워요</p>
+          <p class="text-sm text-sub leading-relaxed">한 번에 하나씩, 부담 없는 작은 배움.</p>
+        </div>
+      </div>
+      <div class="reveal bg-white/50 ring-1 ring-white/50 p-1 rounded-[1.5rem] backdrop-blur-sm shadow-[0_2px_12px_-4px_rgba(0,0,0,0.03)]">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] p-6">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center mb-4">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M18 12H17.1986C16.3689 12 15.9541 12 15.6102 12.1947C15.2664 12.3894 15.0529 12.7451 14.6261 13.4565L14.6261 13.4565L14.5952 13.508C14.1976 14.1707 13.9987 14.5021 13.7095 14.4967C13.4202 14.4912 13.2339 14.1526 12.8615 13.4754L11.1742 10.4076C10.8269 9.77618 10.6533 9.46046 10.3759 9.44549C10.0986 9.43052 9.892 9.7257 9.47875 10.3161L9.19573 10.7204L9.19573 10.7204C8.75681 11.3474 8.53734 11.6609 8.21173 11.8305C7.88612 12 7.50342 12 6.73803 12H6"/><path stroke-linejoin="round" d="M2 9.26044C2 13.0079 6.01943 16.9714 8.96173 19.3707C10.2937 20.4569 10.9597 21 12 21C13.0403 21 13.7063 20.4569 15.0383 19.3707C17.9806 16.9714 22 13.008 22 9.2604C22 3.34931 16.4998 0.662637 12 5.49877C7.50016 0.662637 2 3.3495 2 9.26044Z"/></g></svg>
+          </div>
+          <p class="font-bold text-ink mb-1">쉽게 시작해요</p>
+          <p class="text-sm text-sub leading-relaxed">짧고 쉬운 학습으로 가볍게 시작해요.</p>
+        </div>
+      </div>
+      <div class="reveal bg-white/50 ring-1 ring-white/50 p-1 rounded-[1.5rem] backdrop-blur-sm shadow-[0_2px_12px_-4px_rgba(0,0,0,0.03)]">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] p-6">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center mb-4">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M21 11.9914C21 11.4234 21 10.8996 21 10.4167C21 7.21907 21 5.62028 20.6225 5.08241C20.245 4.54454 18.7417 4.02996 15.7351 3.00079L15.1623 2.80472C13.595 2.26824 12.8114 2 12 2C11.1886 2 10.405 2.26824 8.83772 2.80472L8.26491 3.00079C5.25832 4.02996 3.75503 4.54454 3.37752 5.08241C3 5.62028 3 7.21907 3 10.4167C3 10.8996 3 11.4234 3 11.9914C3 17.6294 7.23896 20.3655 9.89856 21.5273C10.62 21.8424 10.9807 22 12 22C13.0193 22 13.38 21.8424 14.1014 21.5273C16.761 20.3655 21 17.6294 21 11.9914Z"/><path stroke-linejoin="round" d="M9.5 12.4L10.9286 14L14.5 10"/></g></svg>
+          </div>
+          <p class="font-bold text-ink mb-1">즐겁게 익혀요</p>
+          <p class="text-sm text-sub leading-relaxed">하나씩 알아가는 재미를 느끼며.</p>
+        </div>
+      </div>
+      <div class="reveal bg-white/50 ring-1 ring-white/50 p-1 rounded-[1.5rem] backdrop-blur-sm shadow-[0_2px_12px_-4px_rgba(0,0,0,0.03)]">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] p-6">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center mb-4">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="M7.37767 12.5556L7.37767 11.6296C7.37767 9.07276 9.46677 7 12.0438 7C13.4046 7 14.6294 7.57797 15.4823 8.5M6.00011 11L7.37767 12.5556L9.00011 11"/><path stroke-linejoin="round" d="M16.6188 11.4445V12.3704C16.6188 14.9273 14.5217 17 11.9349 17C10.5778 17 9.3555 16.4296 8.50006 15.5181M18.0001 12.9991L16.6188 11.4445L15.0001 12.9991"/><circle cx="12" cy="12" r="10"/></g></svg>
+          </div>
+          <p class="font-bold text-ink mb-1">조금씩 쌓아가요</p>
+          <p class="text-sm text-sub leading-relaxed">매일의 작은 배움이 나의 성장이 되도록.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
