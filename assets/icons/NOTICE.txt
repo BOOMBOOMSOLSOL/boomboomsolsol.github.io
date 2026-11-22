@@ -1,0 +1,6 @@
+Original icon shapes served by Iconify (https://iconify.design):
+Solar by 480 Design, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+https://www.figma.com/community/file/1166831539721848736
+Simple Icons by Simple Icons Collaborators, CC0-1.0, https://github.com/simple-icons/simple-icons
+SVG Logos by Gil Barbara, CC0-1.0, https://github.com/gilbarbara/logos
+Icons resized for display; original shapes retained.

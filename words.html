@@ -1,11 +1,61 @@
 ---
-layout: "default"
-title: "이야기 안내"
-description: "붐붐솔솔의 제작 이야기와 소식을 만나는 곳입니다."
-canonical: "/breeze/"
+layout: default
+canonical: /breeze/
 sitemap: false
-permalink: "/words/"
+permalink: /words/
+title: Words
+description: 붐붐솔솔이 전하는 이야기
 ---
 
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <div class="max-w-3xl">
+    <p class="reveal inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
+      Words
+    </p>
+    <h1 class="reveal text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-ink mb-4">
+      이야기
+    </h1>
+    <p class="reveal text-lg text-sub leading-relaxed">
+      앱을 만들며 느끼고 배운 것들을 나눕니다.
+    </p>
+  </div>
+</section>
 
-<section class="site-container page-heading"><p class="eyebrow">붐붐솔솔 이야기</p><h1>이야기는 이곳에 모았어요.</h1><p>배움에서 시작된 생각과 만드는 사람들의 이야기를 만나보세요.</p><a class="button button-primary" href="/breeze/">이야기 목록으로 이동 ↗</a></section>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  {% if site.posts.size > 0 %}
+  <div class="max-w-3xl space-y-4 stagger">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="reveal block group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.5rem] premium-hover">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h2 class="text-lg font-bold text-ink group-hover:text-sage-dark transition-colors">{{ post.title }}</h2>
+              {% if post.excerpt %}
+              <p class="text-sm text-sub mt-2 leading-relaxed line-clamp-2">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+              {% endif %}
+              <p class="text-xs text-sub/60 mt-3">{{ post.date | date: "%Y년 %m월 %d일" }}</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-black/[0.03] flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-sage/10 transition-colors">
+              <svg aria-hidden="true" focusable="false" width="14" height="14" class="site-icon text-sub group-hover:text-sage-dark transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12H20M14 18L20 12L14 6"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="max-w-3xl">
+    <div class="reveal bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem]">
+      <div class="bg-surface rounded-[calc(2rem-0.375rem)] p-12 md:p-16 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-black/[0.03] flex items-center justify-center mx-auto mb-6">
+          <svg aria-hidden="true" focusable="false" width="28" height="28" class="site-icon text-sub/40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M22 10.5V12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2H13.5"/><path d="M16.652 3.45506L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938 2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.5449 7.34795M16.652 3.45506C16.652 3.45506 16.7331 4.83379 17.9497 6.05032C19.1662 7.26685 20.5449 7.34795 20.5449 7.34795M16.652 3.45506L10.6872 9.41993C10.2832 9.82394 10.0812 10.0259 9.90743 10.2487C9.70249 10.5114 9.52679 10.7957 9.38344 11.0965C9.26191 11.3515 9.17157 11.6225 8.99089 12.1646L8.41242 13.9M8.41242 13.9L8.03811 15.0229C7.9492 15.2897 8.01862 15.5837 8.21744 15.7826C8.41626 15.9814 8.71035 16.0508 8.97709 15.9619L10.1 15.5876L11.8354 15.0091C12.3775 14.8284 12.6485 14.7381 12.9035 14.6166C13.2043 14.4732 13.4886 14.2975 13.7513 14.0926C13.9741 13.9188 14.1761 13.7168 14.5801 13.3128L20.5449 7.34795M10.1 15.5876L8.41242 13.9"/></g></svg>
+        </div>
+        <p class="text-lg font-bold text-sub/60 mb-2">아직 작성된 글이 없습니다</p>
+        <p class="text-sm text-sub/40">곧 첫 이야기를 전해드리겠습니다</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>

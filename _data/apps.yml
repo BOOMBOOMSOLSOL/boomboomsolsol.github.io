@@ -1,7 +1,7 @@
 - id: vocabulary
   name: "국어:어휘의 신"
   category: 국어
-  description: "한 단어를 알아가는 즐거움. 카드와 퀴즈로 국어 어휘를 차곡차곡 익혀요."
+  description: "초등부터 성인까지, 10,000+ 단어로 어휘력을 키우는 학습 앱"
   icon: /assets/images/vocabulary/app-icon.webp
   url: /apps/vocabulary/
   status: 출시
@@ -28,7 +28,7 @@
 - id: facts
   name: "국어:상식의 신"
   category: 상식
-  description: "하루의 작은 호기심이 지식으로. 재미있는 상식을 카드로 만나요."
+  description: "매일 1분, 10,000+개의 재미있는 상식을 만나는 앱"
   icon: /assets/images/facts/facts_app_icon.webp
   url: /apps/facts/
   status: 출시

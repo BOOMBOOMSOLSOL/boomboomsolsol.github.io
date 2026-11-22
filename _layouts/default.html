@@ -38,12 +38,45 @@
 </head>
 <body class="bg-cream text-ink font-sans min-h-[100dvh] flex flex-col antialiased">
   <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
-  <header class="site-header"><div class="site-container header-inner">
+  <header class="fixed top-0 w-full z-40 px-4 sm:px-6 lg:px-8 pt-4"><div class="max-w-7xl mx-auto"><div class="glass-nav header-inner rounded-full px-6 py-3">
     <a href="/" class="brand brand-wordmark" aria-label="붐붐솔솔 홈"><img src="/assets/images/logo.png" alt="BOOMBOOMSOLSOL" width="1200" height="120"></a>
-    <nav class="desktop-nav" aria-label="주 메뉴"><a href="/apps/" {% if page.url contains '/apps/' %}aria-current="page"{% endif %}>학습 앱</a><a href="/breeze/" {% if page.url contains '/breeze/' %}aria-current="page"{% endif %}>이야기</a><a href="/support/" {% if page.url contains '/support/' %}aria-current="page"{% endif %}>고객지원</a><a class="button button-primary" href="{{ site.company.download }}">다운로드 ↗</a></nav>
+    <nav class="desktop-nav" aria-label="주 메뉴"><a href="/apps/" {% if page.url contains '/apps/' %}aria-current="page"{% endif %}>Apps</a><a href="/breeze/" {% if page.url contains '/breeze/' %}aria-current="page"{% endif %}>Breeze</a><a href="/support/" {% if page.url contains '/support/' %}aria-current="page"{% endif %}>Support</a><a class="button button-primary" href="{{ site.company.download }}">Download ↗</a></nav>
     <details class="mobile-menu" id="mobile-menu"><summary aria-controls="mobile-menu-links"><span class="menu-word">메뉴</span><span aria-hidden="true">☰</span></summary><nav class="mobile-menu-panel" id="mobile-menu-links" aria-label="모바일 주 메뉴"><a href="/apps/">학습 앱</a><a href="/breeze/">이야기</a><a href="/support/">고객지원</a><a href="{{ site.company.download }}">다운로드 ↗</a></nav></details>
-  </div></header>
-  <main id="main-content" tabindex="-1" class="flex-1 w-full">{{ content }}</main>
-  <footer class="site-footer"><div class="site-container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="/">붐붐솔솔</a><p>국어 · 수학 · 영어 · 상식<br>알아가는 즐거움이 매일 쌓이도록.</p><a class="contact-email text-sm" href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></div><div><h2>배움과 이야기</h2><ul>{% for app in site.data.apps %}<li><a href="{{ app.url }}">{{ app.name }}</a></li>{% endfor %}<li><a href="/breeze/">소식과 이야기</a></li></ul></div><div><h2>이용 안내</h2><ul><li><a href="/support/">고객지원</a></li><li><a href="/privacy/">개인정보처리방침</a></li><li><a href="/terms/">이용약관</a></li><li><a href="/account-deletion/">계정·데이터 삭제</a></li><li><a href="/download/">앱 다운로드</a></li></ul></div></div><p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.company.name }} · 대표 {{ site.company.ceo }}. All rights reserved.</p></div></footer>
+  </div></div></header>
+  <main id="main-content" tabindex="-1" class="flex-1 w-full pt-24">{{ content }}</main>
+  <footer class="border-t border-black/5 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+        <div>
+          <a href="/" class="inline-block mb-3">
+            <img src="/assets/images/logo.png" alt="붐붐솔솔" class="h-5 w-auto opacity-60">
+          </a>
+          <p class="text-xs text-sub leading-relaxed max-w-[30ch]">{{ site.description }}</p>
+        </div>
+        <div class="flex gap-12">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub/50 mb-3">Navigate</p>
+            <div class="flex flex-col gap-2">
+              <a href="/apps/" class="text-sm text-sub hover:text-ink transition-colors">Apps</a>
+              <a href="/breeze/" class="text-sm text-sub hover:text-ink transition-colors">Breeze</a>
+              <a href="/support/" class="text-sm text-sub hover:text-ink transition-colors">Support</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.15em] font-medium text-sub/50 mb-3">Legal</p>
+            <div class="flex flex-col gap-2">
+              <a href="/privacy/" class="text-sm text-sub hover:text-ink transition-colors">개인정보처리방침</a>
+              <a href="/account-deletion/" class="text-sm text-sub hover:text-ink transition-colors">계정·데이터 삭제</a>
+              <a href="/terms/" class="text-sm text-sub hover:text-ink transition-colors">이용약관</a>
+              <a href="mailto:{{ site.company.email }}" class="text-sm text-sub hover:text-ink transition-colors">문의하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-black/5">
+        <p class="text-xs text-sub/40">&copy; {{ site.time | date: '%Y' }} {{ site.company.name }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

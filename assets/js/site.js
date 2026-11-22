@@ -18,3 +18,13 @@
   const wide = window.matchMedia('(min-width: 768px)');
   wide.addEventListener('change', () => { if (wide.matches) menu.open = false; });
 })();
+
+(() => {
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    document.documentElement.classList.add('reveal-enabled');
+  }
+})();

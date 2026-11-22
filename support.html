@@ -1,21 +1,147 @@
 ---
-layout: "default"
-title: "고객지원"
-description: "붐붐솔솔 학습 앱의 이용, 구매 복원, 환불, 계정 삭제와 개인정보 문의를 안내합니다."
-permalink: "/support/"
+layout: default
+permalink: /support/
+title: Support
+description: 도움이 필요하신가요?
 ---
 
+<!-- Header -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <div class="max-w-3xl">
+    <p class="reveal inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.15em] font-medium bg-sage/10 text-sage-dark mb-6">
+      Support
+    </p>
+    <h1 class="reveal text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-ink mb-4">
+      도움이 필요하신가요?
+    </h1>
+    <p class="reveal text-lg text-sub leading-relaxed max-w-[50ch]">
+      자주 묻는 질문을 확인하거나, 직접 문의해 주세요.
+    </p>
+  </div>
+</section>
 
-<section class="site-container page-heading"><p class="eyebrow">고객지원</p><h1>무엇을 도와드릴까요?</h1><p>사용 중인 앱을 선택하거나 자주 묻는 질문을 확인해 주세요.</p></section>
-<section class="site-container section-space support-layout"><div><nav class="app-jump" aria-label="앱별 도움말">{% for app in site.data.apps %}<a href="#{{ app.id }}">{{ app.name }}</a>{% endfor %}</nav>
-<h2 class="section-title">자주 묻는 질문</h2>
-<details class="faq"><summary>무료로 이용할 수 있나요?</summary><p>무료 이용 범위와 광고 방식은 앱마다 다릅니다. 유료 상품을 선택할 때에는 결제 전에 표시되는 가격·제공 범위·구독 여부를 확인해 주세요.</p></details>
-<details class="faq"><summary>구매한 이용권이 보이지 않아요.</summary><p>구매한 때와 같은 스토어 계정인지 확인하고 앱의 구매 복원을 이용해 주세요. Google Play와 App Store의 구매는 서로 자동 전환되지 않습니다. 해결되지 않으면 앱 이름·기기·주문번호를 알려주세요. 카드번호와 비밀번호는 보내지 마세요.</p></details>
-<details class="faq"><summary>구독 취소와 환불은 어디에서 하나요?</summary><p>자동 갱신 구독은 구매한 스토어의 구독 관리에서 취소할 수 있습니다. 일회성 구매는 자동 갱신되지 않습니다. 환불은 관계 법령과 구매한 스토어의 공식 절차에 따라 신청할 수 있습니다.</p><p><a href="https://support.google.com/googleplay/answer/2479637">Google Play 환불 안내</a> · <a href="https://support.apple.com/ko-kr/118223">Apple 환불 안내</a></p></details>
-<details class="faq"><summary>기기를 바꾸기 전에 무엇을 확인하나요?</summary><p>게스트의 기기 내 기록은 앱 삭제·기기 초기화로 복원할 수 없을 수 있습니다. 앱이 제공하는 계정 연결과 저장·동기화 방법을 먼저 확인해 주세요. 수학은 로그인 후 수동 동기화를 직접 실행해야 기록을 계정에 보관합니다.</p></details>
-<details class="faq"><summary>알림을 끄거나 개인정보 삭제를 요청하고 싶어요.</summary><p>알림은 앱 또는 운영체제 설정에서 끌 수 있습니다. 계정·개인정보의 열람·정정·삭제·동의 철회는 앱에서 제공하는 기능 또는 공식 이메일로 요청할 수 있습니다.</p><p><a href="/account-deletion/">계정·데이터 삭제 요청 방법 보기</a></p></details>
-<div class="app-support" id="vocabulary"><h2>국어:어휘의 신</h2><p>단어 학습·퀴즈·진도·구독 문의 시 사용 중인 기기와 앱 버전을 알려주세요. 계정의 기록과 기기에만 있는 기록을 구분해 안내해 드립니다.</p><a class="text-link" href="mailto:{{ site.company.email }}?subject=%5B%EA%B5%AD%EC%96%B4%3A%EC%96%B4%ED%9C%98%EC%9D%98%20%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98">국어 앱 문의하기 ↗</a><div class="policy-links"><a href="/privacy/#vocabulary">개인정보 안내</a><a href="/terms/#vocabulary">이용 조건</a></div></div>
+<!-- Contact -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="reveal bg-black/[0.02] ring-1 ring-black/5 p-1.5 rounded-[2rem]">
+    <div class="bg-surface rounded-[calc(2rem-0.375rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] p-6 md:p-8 flex flex-wrap items-center gap-4">
+      <div class="w-12 h-12 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0">
+        <svg aria-hidden="true" focusable="false" width="24" height="24" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10 20H14C17.7712 20 19.6569 20 20.8284 18.8284C22 17.6569 22 15.7712 22 12C22 8.22876 22 6.34315 20.8284 5.17157C19.6569 4 17.7712 4 14 4H10C6.22876 4 4.34315 4 3.17157 5.17157C2 6.34315 2 8.22876 2 12C2 15.7712 2 17.6569 3.17157 18.8284C4.34315 20 6.22876 20 10 20Z"/><path d="M6 8L8.1589 9.79908C9.99553 11.3296 10.9139 12.0949 12 12.0949C13.0861 12.0949 14.0045 11.3296 15.8411 9.79908L18 8"/></g></svg>
+      </div>
+      <div class="flex-1">
+        <p class="font-bold text-ink">이메일 문의</p>
+        <p class="text-sm text-sub">평일 기준 24시간 이내 답변드립니다</p>
+      </div>
+      <a href="mailto:{{ site.company.email }}" class="inline-flex items-center gap-2 rounded-full bg-ink text-white px-5 py-2.5 text-sm font-semibold premium-hover active:scale-[0.98] flex-shrink-0">
+        문의하기
+        <svg aria-hidden="true" focusable="false" width="14" height="14" class="site-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12H20M14 18L20 12L14 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  <h2 class="reveal text-2xl font-extrabold tracking-tight mb-8">자주 묻는 질문</h2>
+
+  <div class="space-y-3 stagger">
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">붐붐솔솔은 어떤 회사인가요?</p>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" class="site-icon text-sub group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9L12 15L5 9"/></svg>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        붐붐솔솔은 학습 앱을 만드는 소프트웨어 스튜디오입니다. 매일 쓰고 싶은 앱을 목표로, 사용자 경험을 최우선으로 생각합니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">앱은 무료인가요?</p>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" class="site-icon text-sub group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9L12 15L5 9"/></svg>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        기본 기능은 무료로 제공됩니다. 일부 프리미엄 콘텐츠는 인앱 구매를 통해 이용하실 수 있습니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">어떤 기기에서 사용할 수 있나요?</p>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" class="site-icon text-sub group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9L12 15L5 9"/></svg>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        국어:어휘의 신은 Android와 iOS에서, 국어:상식의 신은 현재 Android에서 사용할 수 있습니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">버그를 발견했어요. 어디에 알려야 하나요?</p>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" class="site-icon text-sub group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9L12 15L5 9"/></svg>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        <a href="mailto:{{ site.company.email }}" class="text-sage-dark underline underline-offset-2">{{ site.company.email }}</a>로 알려주시면 빠르게 확인하겠습니다. 스크린샷이나 재현 방법을 함께 보내주시면 더 빠른 처리가 가능합니다.
+      </div>
+    </details>
+
+    <details class="reveal group">
+      <summary class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.25rem] cursor-pointer list-none premium-hover">
+        <div class="bg-surface rounded-[calc(1.25rem-0.25rem)] p-5 flex items-center justify-between gap-4">
+          <p class="font-semibold text-ink">개인정보는 어떻게 보호되나요?</p>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" class="site-icon text-sub group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9L12 15L5 9"/></svg>
+        </div>
+      </summary>
+      <div class="px-6 pb-5 pt-2 text-sm text-sub leading-relaxed">
+        불필요한 개인정보를 수집하지 않으며, 학습 데이터는 기기에 안전하게 저장됩니다. 자세한 내용은 <a href="/privacy/" class="text-sage-dark underline underline-offset-2">개인정보처리방침</a>을 확인해 주세요.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- Legal Links -->
+<section id="legal" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+  <h2 class="reveal text-2xl font-extrabold tracking-tight mb-8">법적 고지</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger">
+    <a href="/privacy/" id="privacy" class="reveal group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.5rem] premium-hover">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] p-6 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M21 11.9914C21 11.4234 21 10.8996 21 10.4167C21 7.21907 21 5.62028 20.6225 5.08241C20.245 4.54454 18.7417 4.02996 15.7351 3.00079L15.1623 2.80472C13.595 2.26824 12.8114 2 12 2C11.1886 2 10.405 2.26824 8.83772 2.80472L8.26491 3.00079C5.25832 4.02996 3.75503 4.54454 3.37752 5.08241C3 5.62028 3 7.21907 3 10.4167C3 10.8996 3 11.4234 3 11.9914C3 17.6294 7.23896 20.3655 9.89856 21.5273C10.62 21.8424 10.9807 22 12 22C13.0193 22 13.38 21.8424 14.1014 21.5273C16.761 20.3655 21 17.6294 21 11.9914Z"/><path stroke-linejoin="round" d="M9.5 12.4L10.9286 14L14.5 10"/></g></svg>
+          </div>
+          <div>
+            <p class="font-bold text-ink group-hover:text-sage-dark transition-colors">개인정보처리방침</p>
+            <p class="text-xs text-sub mt-0.5">개인정보 수집 및 이용 안내</p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="/terms/" id="terms" class="reveal group">
+      <div class="bg-black/[0.02] ring-1 ring-black/5 p-1 rounded-[1.5rem] premium-hover">
+        <div class="bg-surface rounded-[calc(1.5rem-0.25rem)] p-6 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center flex-shrink-0">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" class="site-icon text-sage-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V10C21 6.22876 21 4.34315 19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22Z"/><path d="M8 12H16"/><path d="M8 8H16"/><path d="M8 16H13"/></g></svg>
+          </div>
+          <div>
+            <p class="font-bold text-ink group-hover:text-sage-dark transition-colors">이용약관</p>
+            <p class="text-xs text-sub mt-0.5">서비스 이용 조건</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="site-container section-space"><div class="app-support" id="vocabulary"><h2>국어:어휘의 신</h2><p>단어 학습·퀴즈·진도·구독 문의 시 사용 중인 기기와 앱 버전을 알려주세요. 계정의 기록과 기기에만 있는 기록을 구분해 안내해 드립니다.</p><a class="text-link" href="mailto:{{ site.company.email }}?subject=%5B%EA%B5%AD%EC%96%B4%3A%EC%96%B4%ED%9C%98%EC%9D%98%20%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98">국어 앱 문의하기 ↗</a><div class="policy-links"><a href="/privacy/#vocabulary">개인정보 안내</a><a href="/terms/#vocabulary">이용 조건</a></div></div>
 <div class="app-support" id="math"><h2>수학:연산의 신</h2><p>초등 학습 과정, 도전, 힌트·풀이, 초등팩과 수동 동기화를 안내합니다. 풀이를 본 문제는 정답 점수에서 제외됩니다. 초등팩은 일회성 구매 상품입니다.</p><a class="text-link" href="mailto:{{ site.company.email }}?subject=%5B%EC%88%98%ED%95%99%3A%EC%97%B0%EC%82%B0%EC%9D%98%20%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98">수학 앱 문의하기 ↗</a><div class="policy-links"><a href="/privacy/#math">개인정보 안내</a><a href="/terms/#math">이용 조건</a></div></div>
 <div class="app-support" id="english"><h2>영어:단어의 신</h2><p>출시를 준비하고 있습니다. 새로운 소식과 이용 안내는 공식 사이트에 게시합니다.</p><a class="text-link" href="mailto:{{ site.company.email }}?subject=%5B%EC%98%81%EC%96%B4%3A%EB%8B%A8%EC%96%B4%EC%9D%98%20%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98">영어 앱 문의하기 ↗</a></div>
-<div class="app-support" id="facts"><h2>국어:상식의 신</h2><p>상식 카드·관심 카테고리·알림·구매 문의를 받습니다. Android 기기와 앱 버전을 함께 적어주세요.</p><a class="text-link" href="mailto:{{ site.company.email }}?subject=%5B%EA%B5%AD%EC%96%B4%3A%EC%83%81%EC%8B%9D%EC%9D%98%20%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98">상식 앱 문의하기 ↗</a><div class="policy-links"><a href="/privacy/#facts">개인정보 안내</a><a href="/terms/#facts">이용 조건</a></div></div>
-</div><aside class="contact-card"><p class="eyebrow">공식 문의</p><h2>이메일로 알려주세요.</h2><a class="contact-email" href="mailto:{{ site.company.email }}">{{ site.company.email }}</a><p>앱 이름, 기기 종류, 앱 버전과 문의 내용을 보내주시면 확인 후 답변드립니다.</p><p class="muted">비밀번호·인증번호·카드번호는 보내지 마세요. 오류 화면에 개인정보가 있다면 가려주세요.</p><a class="text-link" href="/account-deletion/">계정·데이터 삭제 안내 ↗</a></aside></section>
+<div class="app-support" id="facts"><h2>국어:상식의 신</h2><p>상식 카드·관심 카테고리·알림·구매 문의를 받습니다. Android 기기와 앱 버전을 함께 적어주세요.</p><a class="text-link" href="mailto:{{ site.company.email }}?subject=%5B%EA%B5%AD%EC%96%B4%3A%EC%83%81%EC%8B%9D%EC%9D%98%20%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98">상식 앱 문의하기 ↗</a><div class="policy-links"><a href="/privacy/#facts">개인정보 안내</a><a href="/terms/#facts">이용 조건</a></div></div></section>
