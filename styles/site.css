@@ -203,3 +203,7 @@ main a.inline-flex { max-width:100%; }
 }
 
 #math table th:first-child { width:30%; }
+
+/* Preserve the original header wordmark and its aspect ratio. */
+.brand.brand-wordmark { width:240px; flex:0 1 240px; min-width:0; max-width:calc(100% - 56px); }
+.brand.brand-wordmark img { width:100%; height:auto; border-radius:0; }
