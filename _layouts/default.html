@@ -27,7 +27,7 @@
   <meta name="twitter:title" content="{{ seo_title | escape }}">
   <meta name="twitter:description" content="{{ seo_description | escape }}">
   <meta name="twitter:image" content="{{ social_image | absolute_url }}">
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
   <script defer src="/assets/js/site.js"></script>
   {% if page.url == '/' %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":{{ site.company.name | jsonify }},"url":{{ site.url | jsonify }},"email":{{ site.company.email | jsonify }},"logo":{{ '/assets/images/apple-touch-icon.png' | absolute_url | jsonify }}}</script>
