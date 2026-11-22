@@ -2,7 +2,7 @@
   name: "국어:어휘의 신"
   category: 국어
   description: "한 단어를 알아가는 즐거움. 카드와 퀴즈로 국어 어휘를 차곡차곡 익혀요."
-  icon: /assets/images/voca_app_icon.webp
+  icon: /assets/images/vocabulary/app-icon.webp
   url: /apps/vocabulary/
   status: 출시
   platforms: "iOS · Android"
